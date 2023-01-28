@@ -1,3 +1,4 @@
+import { Button, Card } from 'react-bootstrap';
 import './index.css'
 
 function Hero({
@@ -5,10 +6,15 @@ function Hero({
   text,
 }) {
   return (
-    <>
-      <img width={300} src={imgSrc} />
-      <p>{text}</p>
-    </>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={imgSrc} />
+      <Card.Body>
+        <Card.Text>
+          {text}
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
   );
 }
 
